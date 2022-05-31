@@ -30,31 +30,49 @@ public class ListStorageSaving extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        item1 = new javax.swing.JLabel();
+        item = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        item1.setText("tem");
+        item.setText("tem");
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(item)
+                .addGap(129, 129, 129))
             .addGroup(layout.createSequentialGroup()
-                .addGap(138, 138, 138)
-                .addComponent(item1)
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addGap(124, 124, 124)
+                .addComponent(jButton1)
+                .addContainerGap(203, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addComponent(item1)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addComponent(jButton1)
+                .addGap(70, 70, 70)
+                .addComponent(item)
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        item.setText("a");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private static ListEngine le = new ListEngine();
     
@@ -93,12 +111,12 @@ public class ListStorageSaving extends javax.swing.JFrame {
         });
         loadFile();
         ListStorageSaving lss = new ListStorageSaving();
-        lss.printList();
+//        lss.printList();
     }
     
     public void printList() {
-        item1.setText("a");
-        System.out.println(le.getItem(0));
+        item.setText("a");
+        System.out.println("AAA-" + le.getItem(0));
     }
     
     public static void loadFile() {
@@ -131,6 +149,7 @@ public class ListStorageSaving extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel item1;
+    private javax.swing.JLabel item;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
